@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/Sample.csproj": {}
+    "/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/MyApp.APP.csproj": {}
   },
   "projects": {
-    "/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/Sample.csproj": {
+    "/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/MyApp.APP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/Sample.csproj",
-        "projectName": "Sample",
-        "projectPath": "/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/Sample.csproj",
+        "projectUniqueName": "/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/MyApp.APP.csproj",
+        "projectName": "MyApp.APP",
+        "projectPath": "/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/MyApp.APP.csproj",
         "packagesPath": "/Users/shikharshah/.nuget/packages/",
-        "outputPath": "/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/obj/",
+        "outputPath": "/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/shikharshah/.nuget/NuGet/NuGet.Config"

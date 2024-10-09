@@ -1,0 +1,30 @@
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/bin/Debug/net8.0/MyApp.APP
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/bin/Debug/net8.0/MyApp.APP.deps.json
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/bin/Debug/net8.0/MyApp.APP.runtimeconfig.json
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/bin/Debug/net8.0/MyApp.APP.dll
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/bin/Debug/net8.0/MyApp.APP.pdb
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.AssemblyInfoInputs.cache
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.AssemblyInfo.cs
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.csproj.CoreCompileInputs.cache
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.sourcelink.json
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.dll
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/refint/MyApp.APP.dll
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.pdb
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.genruntimeconfig.cache
+/Users/shikharshah/Desktop/Revature Work/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/ref/MyApp.APP.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/bin/Debug/net8.0/MyApp.APP
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/bin/Debug/net8.0/MyApp.APP.deps.json
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/bin/Debug/net8.0/MyApp.APP.runtimeconfig.json
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/bin/Debug/net8.0/MyApp.APP.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/bin/Debug/net8.0/MyApp.APP.pdb
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.AssemblyInfoInputs.cache
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.AssemblyInfo.cs
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.csproj.CoreCompileInputs.cache
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.sourcelink.json
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/refint/MyApp.APP.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.pdb
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/MyApp.APP.genruntimeconfig.cache
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/MyConsoleApp/MyApp.APP/obj/Debug/net8.0/ref/MyApp.APP.dll

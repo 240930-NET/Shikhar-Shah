@@ -1,0 +1,15 @@
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/bin/Debug/net8.0/Sample
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/bin/Debug/net8.0/Sample.deps.json
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/bin/Debug/net8.0/Sample.runtimeconfig.json
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/bin/Debug/net8.0/Sample.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/bin/Debug/net8.0/Sample.pdb
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/obj/Debug/net8.0/Sample.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/obj/Debug/net8.0/Sample.AssemblyInfoInputs.cache
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/obj/Debug/net8.0/Sample.AssemblyInfo.cs
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/obj/Debug/net8.0/Sample.csproj.CoreCompileInputs.cache
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/obj/Debug/net8.0/Sample.sourcelink.json
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/obj/Debug/net8.0/Sample.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/obj/Debug/net8.0/refint/Sample.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/obj/Debug/net8.0/Sample.pdb
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/obj/Debug/net8.0/Sample.genruntimeconfig.cache
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/Sample/obj/Debug/net8.0/ref/Sample.dll
