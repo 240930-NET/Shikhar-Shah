@@ -13,3 +13,12 @@
 /Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/obj/Debug/net8.0/BlackJack.pdb
 /Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/obj/Debug/net8.0/BlackJack.genruntimeconfig.cache
 /Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/obj/Debug/net8.0/ref/BlackJack.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/bin/Debug/net8.0/xunit.runner.visualstudio.testadapter.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/bin/Debug/net8.0/xunit.runner.reporters.netcoreapp10.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/bin/Debug/net8.0/xunit.runner.utility.netcoreapp10.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/bin/Debug/net8.0/xunit.abstractions.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/bin/Debug/net8.0/xunit.assert.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/bin/Debug/net8.0/xunit.core.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/bin/Debug/net8.0/xunit.execution.dotnet.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/obj/Debug/net8.0/BlackJack.csproj.AssemblyReference.cache
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/BlackJack/obj/Debug/net8.0/BlackJack.csproj.Up2Date
