@@ -11,7 +11,7 @@ class Program
 
 public class NumberGuessingGame
 {
-    public int NumberToGuess { get; private set; }
+    public int NumberToGuess { get; set; }
     public int GuessCount { get; private set; }
 
     public NumberGuessingGame()
