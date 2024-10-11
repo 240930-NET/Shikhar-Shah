@@ -4,44 +4,78 @@ class Program
 {
     static void Main(string[] args)
     {
-        Random random = new Random();
-        int numberToGuess = random.Next(1, 101); // Random number between 1 and 100
-        int playerGuess = 0;
-        int guessCount = 0;
+        NumberGuessingGame game = new NumberGuessingGame();
+        game.PlayGame();
+    }
+}
 
+public class NumberGuessingGame
+{
+    public int NumberToGuess { get; private set; }
+    public int GuessCount { get; private set; }
+
+    public NumberGuessingGame()
+    {
+        Random random = new Random();
+        NumberToGuess = random.Next(1, 101); // Random number between 1 and 100
+        GuessCount = 0;
+    }
+
+    // This method checks if the guess is too high, too low, or correct
+    public string CheckGuess(int playerGuess)
+    {
+        GuessCount++;
+        if (playerGuess > NumberToGuess)
+        {
+            return "Too high!";
+        }
+        else if (playerGuess < NumberToGuess)
+        {
+            return "Too low!";
+        }
+        else
+        {
+            return "Correct!";
+        }
+    }
+
+    // This method validates if the input is within range (1-100)
+    public bool IsValidGuess(int playerGuess)
+    {
+        return playerGuess >= 1 && playerGuess <= 100;
+    }
+
+    public void PlayGame()
+    {
         Console.WriteLine("Welcome to the Number Guessing Game!");
         Console.WriteLine("I have picked a number between 1 and 100. Try to guess it!");
 
-        // Game loop: Continue until the player guesses the correct number
-        while (playerGuess != numberToGuess)
+        int playerGuess = 0;
+        while (true)
         {
-            guessCount++;
+            Console.Write("Enter your guess (1-100): ");
+            string input = Console.ReadLine() ?? ""; // Handle null input by assigning an empty string
 
-            Console.Write("Enter your guess: ");
-            string input = Console.ReadLine();
-
-            // Input validation: Check if the input is a valid integer
             if (!int.TryParse(input, out playerGuess))
             {
                 Console.WriteLine("Invalid input. Please enter a valid number.");
                 continue;
             }
 
-            // Check if the guess is too high, too low, or correct
-            if (playerGuess > numberToGuess)
+            if (!IsValidGuess(playerGuess))
             {
-                Console.WriteLine("Too high! Try again.");
+                Console.WriteLine("Your guess is out of range! Please guess a number between 1 and 100.");
+                continue;
             }
-            else if (playerGuess < numberToGuess)
+
+            string result = CheckGuess(playerGuess);
+            Console.WriteLine(result);
+
+            if (result == "Correct!")
             {
-                Console.WriteLine("Too low! Try again.");
-            }
-            else
-            {
-                Console.WriteLine($"Congratulations! You guessed the number in {guessCount} attempts.");
+                Console.WriteLine($"Congratulations! You guessed the number in {GuessCount} attempts.");
+                break;
             }
         }
-
-        Console.WriteLine("Thanks for playing!");
     }
 }

@@ -1,0 +1,15 @@
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/bin/Debug/net8.0/GuessNumber
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/bin/Debug/net8.0/GuessNumber.deps.json
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/bin/Debug/net8.0/GuessNumber.runtimeconfig.json
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/bin/Debug/net8.0/GuessNumber.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/bin/Debug/net8.0/GuessNumber.pdb
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/obj/Debug/net8.0/GuessNumber.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/obj/Debug/net8.0/GuessNumber.AssemblyInfoInputs.cache
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/obj/Debug/net8.0/GuessNumber.AssemblyInfo.cs
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/obj/Debug/net8.0/GuessNumber.csproj.CoreCompileInputs.cache
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/obj/Debug/net8.0/GuessNumber.sourcelink.json
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/obj/Debug/net8.0/GuessNumber.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/obj/Debug/net8.0/refint/GuessNumber.dll
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/obj/Debug/net8.0/GuessNumber.pdb
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/obj/Debug/net8.0/GuessNumber.genruntimeconfig.cache
+/Users/shikharshah/Documents/GitHub/Shikhar-Shah/GuessNumber/obj/Debug/net8.0/ref/GuessNumber.dll
