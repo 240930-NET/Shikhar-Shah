@@ -6,17 +6,13 @@ public class NumberGuessingGame
 {
     public int NumberToGuess { get; set; }
     public int GuessCount { get; private set; }
-    private const string SaveFilePath = "gameState.json"; // File to persist data
-
-    // Constructor that optionally loads a previously saved number to guess
+    private const string SaveFilePath = "gameState.json";
     public NumberGuessingGame(int? numberToGuess = null)
     {
         Random random = new Random();
-        NumberToGuess = numberToGuess ?? random.Next(1, 101); // Use provided number or generate randomly
+        NumberToGuess = numberToGuess ?? random.Next(1, 101);
         GuessCount = 0;
     }
-
-    // Method to check the player's guess
     public string CheckGuess(int playerGuess)
     {
         GuessCount++;
@@ -33,17 +29,12 @@ public class NumberGuessingGame
             return "Correct!";
         }
     }
-
-    // Method to validate if the guess is within range (1-100)
     public bool IsValidGuess(int playerGuess)
     {
         return playerGuess >= 1 && playerGuess <= 100;
     }
-
-    // Method to play the game
     public void PlayGame()
     {
-        // Ask if the user wants to load the previous game
         while (true)
         {
             Console.WriteLine("Do you want to load a previously saved game? (y/n)");
@@ -78,7 +69,6 @@ public class NumberGuessingGame
         int playerGuess = 0;
         bool isGameOver = false;
 
-        // Game loop: Continue until the player guesses the correct number
         while (!isGameOver)
         {
             Console.Write("Enter your guess (1-100): ");
@@ -89,7 +79,6 @@ public class NumberGuessingGame
                 Console.WriteLine("Invalid input. Please enter a valid number.");
                 continue;
             }
-
             if (!IsValidGuess(playerGuess))
             {
                 Console.WriteLine("Your guess is out of range! Please guess a number between 1 and 100.");
@@ -99,15 +88,12 @@ public class NumberGuessingGame
             string result = CheckGuess(playerGuess);
             Console.WriteLine(result);
 
-            // Check if the game should end
             if (result == "Correct!")
             {
                 Console.WriteLine($"Congratulations! You guessed the number in {GuessCount} attempts.");
                 isGameOver = true;
                 break;
             }
-
-            // Ask to save every 3 attempts
             if (GuessCount % 3 == 0)
             {
                 while (true)
@@ -134,8 +120,6 @@ public class NumberGuessingGame
 
         Console.WriteLine("Thanks for playing!");
     }
-
-    // Method to save the game state to a file
     public void SaveGame()
     {
         var gameState = new GameState
@@ -143,18 +127,14 @@ public class NumberGuessingGame
             NumberToGuess = this.NumberToGuess,
             GuessCount = this.GuessCount
         };
-
         string json = JsonSerializer.Serialize(gameState);
         File.WriteAllText(SaveFilePath, json);
         Console.WriteLine("Game state saved.");
     }
-
-    // Method to load the game state from a file
     public static NumberGuessingGame LoadGame()
     {
         string json = File.ReadAllText(SaveFilePath);
         var gameState = JsonSerializer.Deserialize<GameState>(json);
-
         if (gameState != null)
         {
             return new NumberGuessingGame(gameState.NumberToGuess)
@@ -162,14 +142,11 @@ public class NumberGuessingGame
                 GuessCount = gameState.GuessCount
             };
         }
-
         return new NumberGuessingGame();
     }
 }
-
-// Class to hold game state for serialization
 public class GameState
 {
-    public int NumberToGuess { get; set; }
+        public int NumberToGuess { get; set; }
     public int GuessCount { get; set; }
 }
