@@ -58,4 +58,3 @@ public class NumberGuessingGameTests
         Assert.False(result);
     }
 }
-
