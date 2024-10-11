@@ -1,5 +1,3 @@
-using System;
-
 public class Game
 {
     private Deck deck;
@@ -38,7 +36,7 @@ public class Game
         dealer.AddCard(deck.DrawCard());
         dealer.AddCard(deck.DrawCard());
 
-        Console.WriteLine("Player's hand:");
+        Console.WriteLine("Your hand:");
         player.ShowHand();
         Console.WriteLine("Dealer's hand:");
         Console.WriteLine(dealer.Hand[0] + " [Hidden]");
@@ -48,14 +46,14 @@ public class Game
     {
         while (true)
         {
-            Console.WriteLine("Player's total: " + player.CalculateHandValue());
+            Console.WriteLine("Your Score: " + player.CalculateHandValue());
             Console.Write("Do you want to hit or stand? (h/s): ");
             string choice = Console.ReadLine();
 
             if (choice == "h")
             {
                 player.AddCard(deck.DrawCard());
-                Console.WriteLine("Player's new hand:");
+                Console.WriteLine("Your new hand:");
                 player.ShowHand();
 
                 if (player.CalculateHandValue() > 21)
@@ -93,20 +91,20 @@ public class Game
         int playerTotal = player.CalculateHandValue();
         int dealerTotal = dealer.CalculateHandValue();
 
-        Console.WriteLine("Player's total: " + playerTotal);
-        Console.WriteLine("Dealer's total: " + dealerTotal);
+        Console.WriteLine("Your Score: " + playerTotal);
+        Console.WriteLine("Dealer's Score: " + dealerTotal);
 
         if (playerTotal > 21)
         {
-            Console.WriteLine("Dealer wins! Player busted.");
+            Console.WriteLine("Dealer wins! You busted.");
         }
         else if (dealerTotal > 21)
         {
-            Console.WriteLine("Player wins! Dealer busted.");
+            Console.WriteLine("You win! Dealer busted.");
         }
         else if (playerTotal > dealerTotal)
         {
-            Console.WriteLine("Player wins!");
+            Console.WriteLine("You win!");
         }
         else if (dealerTotal > playerTotal)
         {
