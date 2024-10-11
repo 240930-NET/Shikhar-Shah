@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "GuessNumber"
+		},
+		{
+			"path": "NumberGuessingGame.Tests"
+		}
+	],
+	"settings": {}
+}
