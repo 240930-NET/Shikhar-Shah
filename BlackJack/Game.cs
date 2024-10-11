@@ -42,36 +42,45 @@ public class Game
         Console.WriteLine(dealer.Hand[0] + " [Hidden]");
     }
 
-    private void PlayerTurn()
+   private void PlayerTurn()
+{
+    while (true)
     {
-        while (true)
+        Console.WriteLine("Your Score: " + player.CalculateHandValue());
+        
+        // Input validation loop
+        string choice;
+        do
         {
-            Console.WriteLine("Your Score: " + player.CalculateHandValue());
             Console.Write("Do you want to hit or stand? (h/s): ");
-            string choice = Console.ReadLine();
+            choice = Console.ReadLine()?.ToLower();  // Convert input to lowercase for simplicity
 
-            if (choice == "h")
+            if (choice != "h" && choice != "s")
             {
-                player.AddCard(deck.DrawCard());
-                Console.WriteLine("Your new hand:");
-                player.ShowHand();
-
-                if (player.CalculateHandValue() > 21)
-                {
-                    Console.WriteLine("Bust! You exceeded 21.");
-                    break;
-                }
+                Console.WriteLine("Invalid input! Please enter 'h' for hit or 's' for stand.");
             }
-            else if (choice == "s")
+
+        } while (choice != "h" && choice != "s");
+
+        // If player chooses to hit
+        if (choice == "h")
+        {
+            player.AddCard(deck.DrawCard());
+            Console.WriteLine("Your new hand:");
+            player.ShowHand();
+
+            if (player.CalculateHandValue() > 21)
             {
+                Console.WriteLine("Bust! You exceeded 21.");
                 break;
             }
-            else
-            {
-                Console.WriteLine("Invalid input. Please enter 'h' or 's'.");
-            }
+        }
+        else if (choice == "s")
+        {
+            break;  // Player chooses to stand
         }
     }
+}
 
     private void DealerTurn()
     {
