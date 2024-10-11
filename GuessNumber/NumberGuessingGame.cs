@@ -11,11 +11,10 @@ public class NumberGuessingGame
     public NumberGuessingGame(int? numberToGuess = null)
     {
         Random random = new Random();
-        NumberToGuess = numberToGuess ?? random.Next(1, 101);
+        NumberToGuess = numberToGuess ?? random.Next(1, 101); // Random number or provided number for testing
         GuessCount = 0;
     }
 
-    // Method to check the player's guess
     public string CheckGuess(int playerGuess)
     {
         GuessCount++;
@@ -33,13 +32,69 @@ public class NumberGuessingGame
         }
     }
 
-    // Method to validate if the guess is within range (1-100)
     public bool IsValidGuess(int playerGuess)
     {
         return playerGuess >= 1 && playerGuess <= 100;
     }
 
-    // Method to save the game state to a file
+    // The PlayGame method
+    public void PlayGame()
+    {
+        Console.WriteLine("Welcome to the Number Guessing Game!");
+        Console.WriteLine("I have picked a number between 1 and 100. Try to guess it!");
+
+        int playerGuess = 0;
+        while (true)
+        {
+            Console.Write("Enter your guess (1-100): ");
+            string input = Console.ReadLine() ?? "";
+
+            if (!int.TryParse(input, out playerGuess))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+                continue;
+            }
+
+            if (!IsValidGuess(playerGuess))
+            {
+                Console.WriteLine("Your guess is out of range! Please guess a number between 1 and 100.");
+                continue;
+            }
+
+            string result = CheckGuess(playerGuess);
+            Console.WriteLine(result);
+
+            if (result == "Correct!")
+            {
+                Console.WriteLine($"Congratulations! You guessed the number in {GuessCount} attempts.");
+
+                // Ask to save the game after the game ends
+                while (true)
+                {
+                    Console.WriteLine("Do you want to save the game? (y/n)");
+                    string saveChoice = Console.ReadLine()?.ToLower();
+
+                    if (saveChoice == "y")
+                    {
+                        SaveGame();
+                        break;
+                    }
+                    else if (saveChoice == "n")
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input. Please enter 'y' for yes or 'n' for no.");
+                    }
+                }
+                break; // End the game loop
+            }
+        }
+
+        Console.WriteLine("Thanks for playing!");
+    }
+
     public void SaveGame()
     {
         var gameState = new GameState
@@ -53,7 +108,6 @@ public class NumberGuessingGame
         Console.WriteLine("Game state saved.");
     }
 
-    // Method to load the game state from a file
     public static NumberGuessingGame LoadGame()
     {
         if (!File.Exists(SaveFilePath))
