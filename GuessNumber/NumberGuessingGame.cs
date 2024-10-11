@@ -51,7 +51,6 @@ public class NumberGuessingGame
 
             if (loadChoice == "y")
             {
-                // Attempt to load the saved game
                 if (File.Exists(SaveFilePath))
                 {
                     NumberGuessingGame loadedGame = LoadGame();
@@ -100,32 +99,36 @@ public class NumberGuessingGame
             string result = CheckGuess(playerGuess);
             Console.WriteLine(result);
 
-            // End the game if the guess is correct
+            // Check if the game should end
             if (result == "Correct!")
             {
                 Console.WriteLine($"Congratulations! You guessed the number in {GuessCount} attempts.");
                 isGameOver = true;
-            }
-        }
-
-        // Ask to save the game only after the game ends
-        while (true)
-        {
-            Console.WriteLine("Do you want to save the game? (y/n)");
-            string saveChoice = Console.ReadLine()?.ToLower();
-
-            if (saveChoice == "y")
-            {
-                SaveGame();
                 break;
             }
-            else if (saveChoice == "n")
+
+            // Ask to save every 3 attempts
+            if (GuessCount % 3 == 0)
             {
-                break;
-            }
-            else
-            {
-                Console.WriteLine("Invalid input. Please enter 'y' for yes or 'n' for no.");
+                while (true)
+                {
+                    Console.WriteLine("Do you want to save the game? (y/n)");
+                    string saveChoice = Console.ReadLine()?.ToLower();
+
+                    if (saveChoice == "y")
+                    {
+                        SaveGame();
+                        break;
+                    }
+                    else if (saveChoice == "n")
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input. Please enter 'y' for yes or 'n' for no.");
+                    }
+                }
             }
         }
 
