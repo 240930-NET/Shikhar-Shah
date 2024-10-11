@@ -8,13 +8,15 @@ public class NumberGuessingGame
     public int GuessCount { get; private set; }
     private const string SaveFilePath = "gameState.json"; // File to persist data
 
+    // Constructor that optionally loads a previously saved number to guess
     public NumberGuessingGame(int? numberToGuess = null)
     {
         Random random = new Random();
-        NumberToGuess = numberToGuess ?? random.Next(1, 101); // Random number or provided number for testing
+        NumberToGuess = numberToGuess ?? random.Next(1, 101); // Use provided number or generate randomly
         GuessCount = 0;
     }
 
+    // Method to check the player's guess
     public string CheckGuess(int playerGuess)
     {
         GuessCount++;
@@ -32,19 +34,53 @@ public class NumberGuessingGame
         }
     }
 
+    // Method to validate if the guess is within range (1-100)
     public bool IsValidGuess(int playerGuess)
     {
         return playerGuess >= 1 && playerGuess <= 100;
     }
 
-    // The PlayGame method
+    // Method to play the game
     public void PlayGame()
     {
-        Console.WriteLine("Welcome to the Number Guessing Game!");
-        Console.WriteLine("I have picked a number between 1 and 100. Try to guess it!");
+        // Ask if the user wants to load the previous game
+        while (true)
+        {
+            Console.WriteLine("Do you want to load a previously saved game? (y/n)");
+            string loadChoice = Console.ReadLine()?.ToLower();
+
+            if (loadChoice == "y")
+            {
+                // Attempt to load the saved game
+                if (File.Exists(SaveFilePath))
+                {
+                    NumberGuessingGame loadedGame = LoadGame();
+                    NumberToGuess = loadedGame.NumberToGuess;
+                    GuessCount = loadedGame.GuessCount;
+                    Console.WriteLine($"Game state loaded. You have guessed {GuessCount} times so far.");
+                }
+                else
+                {
+                    Console.WriteLine("No saved game found. Starting a new game.");
+                }
+                break;
+            }
+            else if (loadChoice == "n")
+            {
+                Console.WriteLine("Starting a new game.");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter 'y' for yes or 'n' for no.");
+            }
+        }
 
         int playerGuess = 0;
-        while (true)
+        bool isGameOver = false;
+
+        // Game loop: Continue until the player guesses the correct number
+        while (!isGameOver)
         {
             Console.Write("Enter your guess (1-100): ");
             string input = Console.ReadLine() ?? "";
@@ -64,37 +100,39 @@ public class NumberGuessingGame
             string result = CheckGuess(playerGuess);
             Console.WriteLine(result);
 
+            // End the game if the guess is correct
             if (result == "Correct!")
             {
                 Console.WriteLine($"Congratulations! You guessed the number in {GuessCount} attempts.");
+                isGameOver = true;
+            }
+        }
 
-                // Ask to save the game after the game ends
-                while (true)
-                {
-                    Console.WriteLine("Do you want to save the game? (y/n)");
-                    string saveChoice = Console.ReadLine()?.ToLower();
+        // Ask to save the game only after the game ends
+        while (true)
+        {
+            Console.WriteLine("Do you want to save the game? (y/n)");
+            string saveChoice = Console.ReadLine()?.ToLower();
 
-                    if (saveChoice == "y")
-                    {
-                        SaveGame();
-                        break;
-                    }
-                    else if (saveChoice == "n")
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid input. Please enter 'y' for yes or 'n' for no.");
-                    }
-                }
-                break; // End the game loop
+            if (saveChoice == "y")
+            {
+                SaveGame();
+                break;
+            }
+            else if (saveChoice == "n")
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter 'y' for yes or 'n' for no.");
             }
         }
 
         Console.WriteLine("Thanks for playing!");
     }
 
+    // Method to save the game state to a file
     public void SaveGame()
     {
         var gameState = new GameState
@@ -108,23 +146,18 @@ public class NumberGuessingGame
         Console.WriteLine("Game state saved.");
     }
 
+    // Method to load the game state from a file
     public static NumberGuessingGame LoadGame()
     {
-        if (!File.Exists(SaveFilePath))
-        {
-            Console.WriteLine("No saved game found.");
-            return new NumberGuessingGame();
-        }
-
         string json = File.ReadAllText(SaveFilePath);
         var gameState = JsonSerializer.Deserialize<GameState>(json);
 
         if (gameState != null)
         {
-            var game = new NumberGuessingGame(gameState.NumberToGuess);
-            game.GuessCount = gameState.GuessCount;
-            Console.WriteLine("Game state loaded.");
-            return game;
+            return new NumberGuessingGame(gameState.NumberToGuess)
+            {
+                GuessCount = gameState.GuessCount
+            };
         }
 
         return new NumberGuessingGame();
